@@ -1,0 +1,66 @@
+---
+import SocialLinks from './SocialLinks.astro';
+---
+
+<section class="hero">
+	<div class="container hero-inner">
+		<p class="hero-greeting">Hi, I'm</p>
+		<h1 class="hero-name">Yiannos Demetriou</h1>
+		<p class="hero-tagline">MD/PhD Student &middot; Builder &middot; Researcher</p>
+		<p class="hero-desc">
+			I'm a third-year MD/PhD student with a passion for building tools and solving problems at the intersection of science and technology. I like turning ideas into reality, especially ones that others think are impossible.
+		</p>
+		<div class="hero-actions">
+			<a href="/projects" class="btn btn-primary">View Projects</a>
+			<a href="/papers" class="btn btn-outline">Publications</a>
+		</div>
+		<SocialLinks />
+	</div>
+</section>
+
+<style>
+	.hero {
+		padding: 8rem 0 6rem;
+	}
+
+	.hero-inner {
+		max-width: 640px;
+	}
+
+	.hero-greeting {
+		color: var(--accent);
+		font-family: var(--font-mono);
+		font-size: 0.95rem;
+		font-weight: 500;
+		margin-bottom: 0.75rem;
+	}
+
+	.hero-name {
+		font-size: clamp(2.5rem, 5vw, 3.5rem);
+		font-weight: 700;
+		letter-spacing: -0.03em;
+		line-height: 1.1;
+		margin-bottom: 0.75rem;
+	}
+
+	.hero-tagline {
+		color: var(--text-secondary);
+		font-size: 1.2rem;
+		font-weight: 500;
+		margin-bottom: 1.5rem;
+	}
+
+	.hero-desc {
+		color: var(--text-secondary);
+		font-size: 1.05rem;
+		line-height: 1.75;
+		margin-bottom: 2.25rem;
+	}
+
+	.hero-actions {
+		display: flex;
+		gap: 0.75rem;
+		margin-bottom: 2.5rem;
+		flex-wrap: wrap;
+	}
+</style>

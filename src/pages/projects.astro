@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { projects, comingSoon } from '../data/projects';
+---
+
+<BaseLayout title="Projects - Yiannos Demetriou" description="Projects by Yiannos Demetriou. Games, AI tools, and scientific analysis software.">
+	<section class="section">
+		<div class="container">
+			<h1 class="section-title">Projects</h1>
+			<p class="section-subtitle">Things I've built and currently building.</p>
+			<div class="projects-grid">
+				{projects.map(project => <ProjectCard project={project} />)}
+			</div>
+		</div>
+	</section>
+
+	<section class="section coming-soon-section">
+		<div class="container">
+			<h2 class="section-title">Coming Soon</h2>
+			<p class="section-subtitle">What I'm working on next.</p>
+			<div class="projects-grid">
+				{comingSoon.map(project => (
+					<article class="card coming-soon">
+						<div class="card-body">
+							<div class="card-header">
+								<h3 class="card-title">{project.title}</h3>
+								<span class="wip-badge">In Progress</span>
+							</div>
+							<p class="card-desc">{project.description}</p>
+							<div class="card-tags">
+								{project.tags.map(tag => <span class="tag">{tag}</span>)}
+							</div>
+						</div>
+					</article>
+				))}
+			</div>
+		</div>
+	</section>
+</BaseLayout>
+
+<style>
+	.projects-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+		gap: 1.25rem;
+	}
+
+	.coming-soon-section {
+		padding-top: 0;
+	}
+
+	.card {
+		background: var(--bg-card);
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		padding: 1.75rem;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.coming-soon {
+		border-style: dashed;
+	}
+
+	.card-body {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+	}
+
+	.card-header {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		margin-bottom: 0.75rem;
+	}
+
+	.card-title {
+		font-size: 1.2rem;
+		font-weight: 600;
+	}
+
+	.wip-badge {
+		font-size: 0.7rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		padding: 0.2rem 0.5rem;
+		border-radius: 9999px;
+		background: rgba(52, 211, 153, 0.1);
+		color: var(--success);
+		border: 1px solid rgba(52, 211, 153, 0.2);
+		white-space: nowrap;
+	}
+
+	.card-desc {
+		color: var(--text-secondary);
+		font-size: 0.9rem;
+		line-height: 1.65;
+		margin-bottom: 1.25rem;
+		flex: 1;
+	}
+
+	.card-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+	}
+</style>

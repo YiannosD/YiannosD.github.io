@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { papers } from '../data/papers';
+---
+
+<BaseLayout title="Papers - Yiannos Demetriou" description="Publications by Yiannos Demetriou in neuroscience, epilepsy, and spatial computing.">
+	<section class="section">
+		<div class="container papers-content">
+			<h1 class="section-title">Publications</h1>
+			<p class="section-subtitle">Research in epilepsy, neuroscience, and spatial computing.</p>
+			<ol class="papers-list">
+				{papers.map(paper => (
+					<li class="paper">
+						<div class="paper-body">
+							<h3 class="paper-title">
+								{paper.url ? (
+									<a href={paper.url} target="_blank" rel="noopener noreferrer">{paper.title}</a>
+								) : (
+									paper.title
+								)}
+							</h3>
+							<p class="paper-authors">{paper.authors}</p>
+							<p class="paper-journal">{paper.journal}</p>
+						</div>
+						<div class="paper-meta">
+							<span class="paper-year">{paper.year}</span>
+							{paper.citations !== undefined && paper.citations > 0 && (
+								<span class="paper-citations">{paper.citations} {paper.citations === 1 ? 'citation' : 'citations'}</span>
+							)}
+						</div>
+					</li>
+				))}
+			</ol>
+		</div>
+	</section>
+</BaseLayout>
+
+<style>
+	.papers-content {
+		max-width: 780px;
+	}
+
+	.papers-list {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: 1px;
+	}
+
+	.paper {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 2rem;
+		padding: 1.5rem 0;
+		border-bottom: 1px solid var(--border);
+	}
+
+	.paper:first-child {
+		border-top: 1px solid var(--border);
+	}
+
+	.paper-title {
+		font-size: 1rem;
+		font-weight: 600;
+		line-height: 1.5;
+		margin-bottom: 0.4rem;
+	}
+
+	.paper-title a {
+		color: var(--text-primary);
+	}
+
+	.paper-title a:hover {
+		color: var(--accent);
+	}
+
+	.paper-authors {
+		color: var(--text-secondary);
+		font-size: 0.85rem;
+		margin-bottom: 0.2rem;
+	}
+
+	.paper-journal {
+		color: var(--text-muted);
+		font-size: 0.85rem;
+		font-style: italic;
+	}
+
+	.paper-meta {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 0.3rem;
+		flex-shrink: 0;
+	}
+
+	.paper-year {
+		color: var(--text-secondary);
+		font-family: var(--font-mono);
+		font-size: 0.85rem;
+		font-weight: 500;
+	}
+
+	.paper-citations {
+		color: var(--text-muted);
+		font-size: 0.75rem;
+	}
+
+	@media (max-width: 640px) {
+		.paper {
+			flex-direction: column;
+			gap: 0.75rem;
+		}
+
+		.paper-meta {
+			flex-direction: row;
+			align-items: center;
+			gap: 1rem;
+		}
+	}
+</style>

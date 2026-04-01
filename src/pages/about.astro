@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About - Yiannos Demetriou" description="About Yiannos Demetriou, MD/PhD student, builder, and researcher.">
+	<section class="section">
+		<div class="container about-content">
+			<h1 class="section-title">About Me</h1>
+
+			<div class="about-text">
+				<p>
+					I'm a third-year MD/PhD student (G1, PhD in Computer Science) at Wayne State University. I have a passion for building tools and solving problems at the intersection of science and technology. I like turning ideas into reality, especially ones that others think are impossible.
+				</p>
+				<p>
+					I'm just starting my PhD research, which focuses on leveraging AI for medicine. Right now I'm working on a new model architecture for coronary artery segmentation. Before that, I did undergraduate research in epilepsy neuroscience, working on allele-specific gene editing for SCN8A epilepsy and inhibitory neuron pathology in Dravet syndrome.
+				</p>
+				<p>
+					Outside of the lab and medical school, I started <a href="https://joysdawn.dev" target="_blank" rel="noopener noreferrer">Joy's Dawn Solutions LLC</a> so I could fund myself exploring my passion for building lots of fun things. Through it I build custom software for research environments, like automated electrophysiology analysis pipelines and AI-powered code auditing systems. I also built <a href="https://guildinit.com" target="_blank" rel="noopener noreferrer">GuildInit</a>, a game that turns your GitHub activity into a creature-raising RPG.
+				</p>
+			</div>
+
+			<div class="skills-section">
+				<h2>What I Work With</h2>
+				<div class="skills-grid">
+					<div class="skill-group">
+						<h3>Languages</h3>
+						<div class="skill-tags">
+							<span class="tag">Python</span>
+							<span class="tag">TypeScript</span>
+							<span class="tag">C++</span>
+							<span class="tag">JavaScript</span>
+							<span class="tag">SQL</span>
+						</div>
+					</div>
+					<div class="skill-group">
+						<h3>Frontend</h3>
+						<div class="skill-tags">
+							<span class="tag">React</span>
+							<span class="tag">Vite</span>
+							<span class="tag">Tailwind CSS</span>
+							<span class="tag">Astro</span>
+						</div>
+					</div>
+					<div class="skill-group">
+						<h3>Backend & Data</h3>
+						<div class="skill-tags">
+							<span class="tag">Supabase</span>
+							<span class="tag">PostgreSQL</span>
+							<span class="tag">Node.js</span>
+							<span class="tag">Edge Functions</span>
+						</div>
+					</div>
+					<div class="skill-group">
+						<h3>Research & AI</h3>
+						<div class="skill-tags">
+							<span class="tag">NumPy / SciPy</span>
+							<span class="tag">Statsmodels</span>
+							<span class="tag">Claude Code</span>
+							<span class="tag">MCP</span>
+						</div>
+					</div>
+					<div class="skill-group full-width">
+						<h3>Pretty Much Anything</h3>
+						<p class="skill-note">With Claude Code's help, I can pick up and ship in any stack. Most of my projects were built in languages and frameworks I'd never touched before starting them. The tools above are what I reach for most, but they're not a ceiling.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</BaseLayout>
+
+<style>
+	.about-content {
+		max-width: 700px;
+	}
+
+	.about-text {
+		margin-top: 1rem;
+	}
+
+	.about-text p {
+		color: var(--text-secondary);
+		font-size: 1.05rem;
+		line-height: 1.75;
+		margin-bottom: 1.25rem;
+	}
+
+	.skills-section {
+		margin-top: 3rem;
+	}
+
+	.skills-section h2 {
+		font-size: 1.4rem;
+		font-weight: 600;
+		margin-bottom: 1.5rem;
+	}
+
+	.skills-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.skill-group h3 {
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: var(--text-muted);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		margin-bottom: 0.75rem;
+	}
+
+	.skill-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+	}
+
+	.full-width {
+		grid-column: 1 / -1;
+	}
+
+	.skill-note {
+		color: var(--text-secondary);
+		font-size: 0.9rem;
+		line-height: 1.65;
+	}
+</style>

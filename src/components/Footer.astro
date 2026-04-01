@@ -1,0 +1,59 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+	<div class="container footer-inner">
+		<div class="footer-links">
+			<a href="https://github.com/ydemetri" target="_blank" rel="noopener noreferrer">GitHub</a>
+			<a href="https://linkedin.com/in/yiannos-demetriou-75068b1b6" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+			<a href="https://joysdawn.dev" target="_blank" rel="noopener noreferrer">Joy's Dawn Solutions</a>
+			<a href="mailto:ydemetri@umich.edu">Contact</a>
+		</div>
+		<p class="footer-copy">&copy; {year} Yiannos Demetriou</p>
+	</div>
+</footer>
+
+<style>
+	.footer {
+		border-top: 1px solid var(--border);
+		padding: 2rem 0;
+		margin-top: 4rem;
+	}
+
+	.footer-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	.footer-links {
+		display: flex;
+		gap: 1.5rem;
+		flex-wrap: wrap;
+	}
+
+	.footer-links a {
+		color: var(--text-secondary);
+		font-size: 0.85rem;
+		font-weight: 500;
+	}
+
+	.footer-links a:hover {
+		color: var(--text-primary);
+	}
+
+	.footer-copy {
+		color: var(--text-muted);
+		font-size: 0.8rem;
+	}
+
+	@media (max-width: 640px) {
+		.footer-inner {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+</style>
