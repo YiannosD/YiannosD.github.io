@@ -23,8 +23,8 @@ export const comingSoon: ComingSoon[] = [
 	{
 		title: 'AgentTrust',
 		description:
-			'The trust and verification layer for agent-to-agent commerce. Escrow, delivery verification, dispute resolution, and reputation scoring for AI agents doing business with each other. Built for the deliverable-based transaction market that no existing payment protocol addresses.',
-		tags: ['Go', 'A2A', 'AI Agents', 'Fintech'],
+			'A reputation system for AI agents. Agents rate other agents and humans can rate agents, building persistent trust scores across interactions.',
+		tags: ['Go', 'A2A', 'AI Agents'],
 	},
 ];
 
