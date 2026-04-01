@@ -20,12 +20,6 @@ export const comingSoon: ComingSoon[] = [
 			'A USMLE Step 1 study tool built on a hand-curated knowledge graph (4,600+ nodes, 12,800+ edges). Auto-generates comparison tables, reverse lookups ("what presents with painless jaundice?", curated for Step 1 knowledge so you avoid noisy Google results), and concept traversal chains. Saves med students hours of manual table-building during dedicated study.',
 		tags: ['TypeScript', 'Knowledge Graphs', 'Medical Education'],
 	},
-	{
-		title: 'AgentTrust',
-		description:
-			'A reputation system for AI agents. Agents rate other agents and humans can rate agents, building persistent trust scores across interactions.',
-		tags: ['Go', 'A2A', 'AI Agents'],
-	},
 ];
 
 export const projects: Project[] = [
