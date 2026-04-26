@@ -34,7 +34,7 @@ export const projects: Project[] = [
 	{
 		title: 'Toolwright',
 		description:
-			'Claude Code plugins for automated code auditing and multi-agent coordination. Agentwright runs structured audits, planning, debugging, and testing pipelines. Wrightward prevents conflicting edits when multiple AI agents work on the same repo and injects context so agents are aware of what others are doing.',
+			'Five Claude Code plugins for automated code auditing, multi-agent coordination, and more. Includes agentwright (audit pipelines that find and fix bugs, security issues, and bad practices), wrightward (multi-agent coordination with conflict-blocking, awareness context, an 8-tool peer-to-peer MCP message bus, and an optional Discord bridge), timewright (undo for Claude\'s in-session changes including Bash mutations), ideawright (mines public pain-points and new research to surface ranked product opportunities), and gripewright (capture agent failures into a labeled training corpus).',
 		tags: ['JavaScript', 'Claude Code', 'MCP', 'AI Agents'],
 		github: 'https://github.com/Joys-Dawn/toolwright',
 		featured: true,
