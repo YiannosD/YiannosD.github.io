@@ -55,4 +55,12 @@ export const projects: Project[] = [
 		github: 'https://github.com/Joys-Dawn/Fiber-Photometry-ECoG',
 		featured: true,
 	},
+	{
+		title: 'Plethysmography Analysis',
+		description:
+			'A breathing analysis pipeline for live mice being heated to induce seizures. Most plethysmography tools can\'t handle breath detection on moving mice, let alone actively seizing ones. Reads raw EDF recordings, segments breaths, detects sighs and apneas, runs multi-design statistics (ANOVA, GEE, t-tests with FDR correction), and generates publication-ready plots. Used to study breathing dysfunction in seizure and SUDEP mouse models.',
+		tags: ['Python', 'pyEDFlib', 'NumPy', 'SciPy', 'Statsmodels'],
+		github: 'https://github.com/Joys-Dawn/Plethysmography',
+		featured: true,
+	},
 ];
